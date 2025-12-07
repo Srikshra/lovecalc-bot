@@ -21,7 +21,7 @@ user_data_store = {}
 
 def calc_score(a: str, b: str) -> int:
     total = sum(ord(c) for c in (a + b).lower())
-    return 40 + (total % 61)   # 40–100
+    return 85 + (total % 15)  # 85–99
 
 
 # /start command
@@ -99,3 +99,4 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
 app.run_polling()
+
